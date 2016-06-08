@@ -1,0 +1,36 @@
+{
+  "name": "moco",
+  "version": "0.1.0",
+  "description": "Mood and colors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Titans-Inc/Moco.git"
+  },
+  "author": "Devi Prasad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Titans-Inc/Moco/issues"
+  },
+  "homepage": "https://github.com/Titans-Inc/Moco#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.0.1",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-istanbul": "^0.10.4",
+    "gulp-mocha": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^5.0.0",
+    "gulp-typescript": "^2.13.6",
+    "gulp-uglify": "^1.5.3",
+    "run-sequence": "^1.2.1",
+    "tslint": "^3.11.0",
+    "typescript": "^1.8.10",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
