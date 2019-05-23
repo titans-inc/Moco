@@ -1,0 +1,33 @@
+{
+  "name": "moco",
+  "version": "0.0.1-alpha",
+  "description": "Beautiful color transitioner based on color psychology to impact your users sub-concious choices. Prgrammed to understand emotions and/or stratergies and nothing else :)",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "repository": "https://github.com/titans-inc/Moco.git",
+  "author": "Devi Prasad <deviprsd21@yahoo.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.2",
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
+    "gh-pages": "^2.0.1",
+    "jest": "^24.8.0",
+    "microbundle": "^0.11.0",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  }
+}
