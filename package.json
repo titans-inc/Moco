@@ -1,7 +1,7 @@
 {
   "name": "moco",
   "version": "0.0.1-alpha",
-  "description": "Beautiful color transitioner based on color psychology to impact your users sub-concious choices. Prgrammed to understand emotions and/or stratergies and nothing else :)",
+  "description": "Beautiful color transitioner based on color psychology to impact your users sub-concious choices. Programmed to understand emotions and/or stratergies and nothing else :)",
   "main": "dist/index.js",
   "source": "src/index.ts",
   "umd:main": "dist/index.umd.js",
