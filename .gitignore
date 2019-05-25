@@ -37,7 +37,9 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-typings/
-lib/*.js
-test/*.js
+.rts*
+.cache
+dist
+.next
 *.map
+.DS_Store
