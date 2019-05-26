@@ -8,7 +8,7 @@
   "module": "dist/index.mjs",
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "test": "jest --coverage --verbose ./tests",
+    "test": "jest --coverage --verbose ./tests && cat ./coverage/lcov.info | codacy-coverage --language typescript",
     "build": "microbundle",
     "dev": "microbundle watch"
   },
@@ -21,6 +21,7 @@
     "@types/node": "^12.0.2",
     "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
+    "codacy-coverage": "^3.4.0",
     "gh-pages": "^2.0.1",
     "jest": "^24.8.0",
     "microbundle": "^0.11.0",

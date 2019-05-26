@@ -42,4 +42,5 @@ node_modules
 dist
 .next
 *.map
+*.env
 .DS_Store
