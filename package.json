@@ -7,6 +7,9 @@
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.mjs",
   "types": "dist/src/index.d.ts",
+  "mangle": {
+    "regex": "^_"
+  },
   "scripts": {
     "test": "jest --coverage --verbose ./tests && cat ./coverage/lcov.info | codacy-coverage --language typescript",
     "build": "microbundle",
@@ -32,5 +35,8 @@
     "tslint": "^5.16.0",
     "typescript": "^3.4.5",
     "typescript-tslint-plugin": "^0.4.0"
+  },
+  "dependencies": {
+    "typed-rest-client": "^1.4.0"
   }
 }

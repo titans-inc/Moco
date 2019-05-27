@@ -1,16 +1,38 @@
 import { dataStore } from "./bootstrap";
 import { mocoConfigDefaults } from "./config";
 import { ColorTransition, MocoConfig, RawConfiguration } from "./interfaces";
+import { transitionToString } from "./utils";
 
 class Moco {
-    constructor(private el: Element, private config: MocoConfig) {}
+    constructor(private el: HTMLElement, private config: MocoConfig) {
+        const _transition = transitionToString(this.config.transition);
+        this.el.style.transition = _transition;
+        this.el.style.webkitTransition = _transition;
+    }
+
     public get configuration() {
         return this.config;
     }
+
+    public get element() {
+        return this.el;
+    }
 }
 
-export function moco(selector: string, rawConfig: RawConfiguration): void {
-    const _elementsList = Array.from(document.querySelectorAll(selector));
+class MocoManager {
+    constructor(private el: string) {}
+
+    public induce() {
+        throw new Error("Method not implemented.");
+    }
+
+    public useStratergy() {
+        throw new Error("Method not implemented.");
+    }
+}
+
+export function moco(selector: string, rawConfig: RawConfiguration): MocoManager {
+    const _elementsList: HTMLElement[] = Array.from(document.querySelectorAll(selector));
     const _config = {...mocoConfigDefaults, ...rawConfig};
     let _mCfg: MocoConfig;
 
@@ -28,4 +50,6 @@ export function moco(selector: string, rawConfig: RawConfiguration): void {
     for (const el of _elementsList) {
         dataStore.put(el, "data", new Moco(el, _mCfg));
     }
+
+    return new MocoManager(selector);
 }

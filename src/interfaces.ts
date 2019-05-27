@@ -17,8 +17,8 @@ export interface RawConfiguration {
 }
 
 export interface Storage {
-    get(el: Element, key: string): any;
-    has(el: Element, key: string): boolean;
-    put(el: Element, key: string, obj: any): void;
-    remove(el: Element, key: string): boolean;
+    get(el: HTMLElement, key: string): any;
+    has(el: HTMLElement, key: string): boolean;
+    put(el: HTMLElement, key: string, obj: any): void;
+    remove(el: HTMLElement, key: string): boolean;
 }
