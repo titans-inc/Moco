@@ -1,6 +1,6 @@
 export const mocoConfigDefaults = {
-    duration: 0.6,
-    timing: 'ease-in-out',
+    cssClass: null,
     delay: 0,
-    cssClass: null
-}
+    duration: 0.6,
+    timing: "ease-in-out",
+};
