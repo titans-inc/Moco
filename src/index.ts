@@ -1,13 +1,16 @@
+import { dataStore } from "./bootstrap";
 import { mocoConfigDefaults } from "./config";
-import { ColorTransition, MocoConfig } from "./interfaces";
-import { RawConfiguration } from "./types";
+import { ColorTransition, MocoConfig, RawConfiguration } from "./interfaces";
 
 class Moco {
     constructor(private el: Element, private config: MocoConfig) {}
+    public get configuration() {
+        return this.config;
+    }
 }
 
 export function moco(selector: string, rawConfig: RawConfiguration): void {
-    const _elementsList = document.querySelectorAll(selector);
+    const _elementsList = Array.from(document.querySelectorAll(selector));
     const _config = {...mocoConfigDefaults, ...rawConfig};
     let _mCfg: MocoConfig;
 
@@ -23,6 +26,6 @@ export function moco(selector: string, rawConfig: RawConfiguration): void {
     }
 
     for (const el of _elementsList) {
-        new Moco(el, _mCfg);
+        dataStore.put(el, "data", new Moco(el, _mCfg));
     }
 }

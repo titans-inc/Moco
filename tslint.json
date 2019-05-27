@@ -8,7 +8,12 @@
     "adjacent-overload-signatures": true,
     "ban-ts-ignore": true,
     "interface-name": [true, "never-prefix"],
-    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-trailing-underscore", "require-const-for-all-caps"]
+    "prefer-for-of": true,
+    "only-arrow-functions": [true, "allow-named-functions"],
+    "variable-name": [
+      true, "ban-keywords", "check-format", "allow-leading-underscore", 
+      "allow-trailing-underscore", "require-const-for-all-caps"
+    ]
   },
   "rulesDirectory": []
 }
