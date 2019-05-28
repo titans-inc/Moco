@@ -32,6 +32,13 @@ class DataStorage implements Storage {
         }
         return false;
     }
+
+    public removeAll(el: HTMLElement): boolean {
+        if (this._storage.has(el)) {
+            this._storage.delete(el);
+        }
+        return false;
+    }
 }
 
 window.MocoDataStorage = new DataStorage(new WeakMap());

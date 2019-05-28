@@ -11,8 +11,11 @@
     "regex": "^_"
   },
   "scripts": {
+    "expo": "parcel expo/index.html --out-dir dist/expo --open --https",
     "test": "jest --coverage --verbose ./tests && cat ./coverage/lcov.info | codacy-coverage --language typescript",
     "build": "microbundle",
+    "build:expo": "parcel build expo/index.html --out-dir dist/expo --public-url ./",
+    "deploy": "rm -rf ./dist/expo && yarn build:expo && node ./scripts/deploy.js",
     "dev": "microbundle watch"
   },
   "repository": "https://github.com/titans-inc/Moco.git",

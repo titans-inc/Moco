@@ -21,4 +21,5 @@ export interface Storage {
     has(el: HTMLElement, key: string): boolean;
     put(el: HTMLElement, key: string, obj: any): void;
     remove(el: HTMLElement, key: string): boolean;
+    removeAll(el: HTMLElement): boolean;
 }
