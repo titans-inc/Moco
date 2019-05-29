@@ -23,7 +23,7 @@ test("selector id, empty config", () => {
 test("selector class, cssClass config", () => {
     moco(".tests", {cssClass: "moco"});
     for (const el of Array.from(document.getElementsByClassName("tests"))) {
-        const _config = dataStore.get(el, "data").configuration as MocoConfig;
+        const _config = dataStore.get(el as HTMLElement, "data").configuration as MocoConfig;
         expect(_config.cssClass).toBe("moco");
         expect(_config.transition).toBe(null);
     }
