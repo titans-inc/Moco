@@ -7,9 +7,13 @@ class Moco {
     private _timer: NodeJS.Timeout;
 
     constructor(private el: HTMLElement, private config: MocoConfig) {
-        const _transition = transitionToString(this.config.transition);
-        this.el.style.transition = _transition;
-        this.el.style.webkitTransition = _transition;
+        if (config.transition) {
+            const _transition = transitionToString(this.config.transition);
+            this.el.style.transition = _transition;
+            this.el.style.webkitTransition = _transition;
+        } else {
+            this.el.classList.add(config.cssClass);
+        }
         this.start();
     }
 
